@@ -1,0 +1,226 @@
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+}
+
+.outer-container {
+    min-width: 500px;
+    height: 100vh;
+    min-height: 890px;
+    overflow: auto;
+    position: relative;
+}
+
+.top-bar {
+    height: 80px;
+    background: black;
+    opacity: 0.8;
+    display: flex;
+    position: fixed;
+}
+
+.top-bar__logo {
+    padding-left: 50px;
+    padding-top: 13px;
+}
+
+.logo__img {
+    width: 50px;
+    height: 50px;
+}
+
+.top-bar__text {
+    color: white;
+    font-size: 40px;
+    font-weight: thin;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.top-bar__top-name {
+	color: white;
+    font-size: 35px;
+    font-weight: thin;
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.top-name__text {
+	padding-top: 17px;
+	padding-left: 30px;
+    padding-right: 30px;
+    background-color: darkcyan;
+}
+
+.side-navigation {
+    margin-top: 80px;
+    height: calc(100% - 80px);
+    width: 300px;
+    position: fixed;
+    display: block;
+    background: #F1F1F1;
+}
+
+.side-navigation__option {
+    height: 75px;
+    color: #323232;
+    display: flex;
+    cursor: pointer;
+}
+
+.option__icon {
+    font-size: 38px;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.option__text {
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 20px;
+    padding-top: 26px;
+}
+
+.default-option {
+    height: 70px;
+    background: #F1F1F1;
+    display: none;
+    cursor: pointer;
+    color: #323232;
+    margin-top: 80px;
+}
+
+.default-option:hover {
+    background: #536DFE;
+}
+
+.side-navigation__option:nth-child(1) {
+	background: #689F38;
+}
+
+.side-navigation__option:nth-child(1) .option__text {
+    padding-left: 18px;
+}
+
+.side-navigation__option:hover {
+    color: white;
+}
+
+.side-navigation__option:nth-child(2):hover {
+    background: #ED3B3B;
+}
+
+.side-navigation__option:nth-child(3):hover {
+    background: #EF6C00;
+}
+
+.side-navigation__option:nth-child(4):hover {
+    background: #039BE5;
+}
+
+.display-window-wrapper {
+    margin-top: 100px;
+    margin-left: 320px;
+    margin-right: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+    .side-navigation {
+        width: 100%;
+        margin-top: 150px;
+        position: fixed;
+        display: none;
+        height: auto;
+    }
+    .default-option {
+        display: flex;
+        position: fixed;
+    }
+    .display-window-wrapper {
+        margin-left: 20px;
+        margin-top: 180px;
+    }
+}
+
+.pending-apps__app {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    background: #F1F1F1;
+    min-width: 720px;
+    margin-bottom: 20px;
+}
+
+.pending-apps__app:hover {
+	background: #3DADE3;
+}
+
+.pending-apps__app:hover button,
+.pending-apps__app:hover div {
+    color: white;
+}
+
+.pending-apps__app:hover button {
+    border-color: white;
+}
+
+.info__rating {
+    font-size: 30px;
+    font-family: "Lato", "sans-serif";
+    font-weight: bold;
+}
+
+.dp__picture {
+    width: 150px;
+    height: 200px;
+    opacity: 1;
+}
+
+.app__info {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    color: #323232;
+    flex-grow: 1;
+}
+
+.info__name {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.info__options {
+    padding: 50px 20px 0px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.remove__button,
+.get-it__button {
+    background-color: transparent;
+    color: #323232;
+    padding: 16px 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 3px solid #323232;
+}
+
+.get-it__button:hover {
+    background: #277F06;
+}
+
+.remove__button:hover {
+    background: #BB220D;
+}
+
+.options__get-it {
+    margin-right: 20px;
+}
+
+
+

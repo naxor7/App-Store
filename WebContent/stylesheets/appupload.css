@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+    background: #F1F1F1;
+}
+
+.outer-container {
+    min-width: 720px;
+    min-height: 890px;
+    position: relative;
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+.logo__picture {
+    margin: auto;
+    width: 120px;
+    padding-right: 10px;
+}
+
+.logo__text {
+    font-family: "Comic Sans MS";
+    font-size: 100px;
+}
+
+.display-window-wrapper {
+	margin-top: 30px;
+}
+
+.app-description,
+.app-file,
+.app-picture,
+.app-submit-button,
+.app-cost,
+.app-category,
+.app-name {
+	margin-bottom: 30px;
+}
+
+.name__text {
+	margin-left: 50px;
+}
+
+.desc__text {
+	margin-left: 35px;
+}
+
+.cost__text {
+	margin-left: 72px;
+}
+
+.appfile {
+	margin-left: 85px;
+}
+
+.applogo {
+	margin-left: 65px;
+}
+
+.cost__text,
+.desc__text,
+.name__text {
+	box-sizing: border-box;
+    width: 350px;
+    height: 60px;
+    padding: 6px 16px;
+    border: 3px solid #4e4e4e;
+    background-color: transparent;
+    transition: border 0.5s;
+    outline: none;
+    font-size: 22px;
+    color: black;
+    transition: 0.6s;
+}
+
+.cost__text:focus,
+.desc__text:focus,
+.name__text:focus {
+	border: 4px solid black;
+}
+
+.submit-button {
+	background-color: #039BE5;
+    color: white;
+    padding: 14px 40px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 20px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+    font-size: 30px;
+}
+
+.submit-button:hover {
+	background: #026A9D;
+}
+
+.desciption__info-text,
+.file__info-text,
+.picture__info-text,
+.cost__info-text,
+.description__info-text,
+.name__info-text {
+	margin-right: 20px;
+	font-size: 30px;
+}
+
+
+
+

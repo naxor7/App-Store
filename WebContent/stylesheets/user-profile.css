@@ -1,0 +1,694 @@
+body {
+    margin: 0;
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+}
+
+.outer-container {
+    min-width: 500px;
+    min-height: 890px;
+    position: relative;
+}
+
+.top-bar {
+    height: 80px;
+    background: black;
+    opacity: 0.8;
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    top: 0px;
+}
+
+.top-bar__name {
+	display: flex;
+	flex-grow: 1;
+	justify-content: end;
+	color: white;
+	font-size: 25px;
+}
+
+.no-comments {
+	font-size: 40px;
+	color: #212121;
+}
+
+.name__text {
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.top-bar__logo {
+    padding-left: 50px;
+    padding-top: 13px;
+}
+
+.logo__img {
+    width: 50px;
+    height: 50px;
+}
+
+.top-bar__top-name {
+	color: white;
+    font-size: 35px;
+    font-weight: thin;
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+}
+
+.top-name__text {
+	padding-top: 17px;
+	padding-left: 30px;
+    padding-right: 30px;
+    background-color: darkcyan;
+}
+
+.top-bar__text {
+    color: white;
+    font-size: 40px;
+    font-weight: thin;
+    padding-left: 10px;
+    padding-top: 20px;
+}
+
+.side-navigation {
+    margin-top: 80px;
+    height: calc(100% - 80px);
+    width: 300px;
+    position: fixed;
+    top: 0px;
+    display: block;
+    background: #F1F1F1;
+}
+
+.side-navigation__option {
+    height: 75px;
+    color: #323232;
+    display: flex;
+    cursor: pointer;
+}
+
+.option__icon {
+    font-size: 38px;
+    padding-top: 14px;
+    padding-left: 14px;
+    padding-right: 14px;
+}
+
+.option__text {
+    font-size: 22px;
+    font-weight: 500;
+    padding-left: 25px;
+    padding-top: 26px;
+}
+
+.default-option {
+    height: 70px;
+    background: #F1F1F1;
+    display: none;
+    cursor: pointer;
+    color: #323232;
+    margin-top: 80px;
+}
+
+.default-option:hover {
+    background: #536DFE;
+}
+
+.side-navigation__option:nth-child(1) .option__text {
+    padding-left: 18px;
+}
+
+.side-navigation__option:hover {
+    color: white;
+}
+
+.side-navigation__option:nth-child(1):hover {
+    background: #689F38;
+}
+
+.side-navigation__option:nth-child(2):hover {
+    background: #ED3B3B;
+}
+
+.side-navigation__option:nth-child(3):hover {
+    background: #EF6C00;
+}
+
+.side-navigation__option:nth-child(4):hover {
+    background: #039BE5;
+}
+
+.side-navigation__option:nth-child(5):hover {
+    background: #f82929;
+}
+
+.display-window-wrapper {
+    margin-top: 100px;
+    margin-left: 320px;
+    margin-right: 20px;
+}
+
+.application-wrapper__app-info {
+    display: flex;
+    background: #F1F1F1;
+    padding: 20px 20px 20px 20px;
+    box-sizing: border-box;
+    margin-bottom: 25px;
+}
+
+.app-info__image-container {
+    padding-right: 20px;
+}
+
+.image-container__image {
+    width: 230px;
+    height: 300px;
+}
+
+.app-info__text-container {
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+.no-apps {
+    font-size: 30px;
+    padding-top: 20px;
+    padding-left: 10px;
+}
+
+.text-container__app-name {
+    padding-top: 10px;
+    padding-bottom: 15px;
+    font-size: 40px;
+    color: #212121;
+}
+
+.text-container__app-release {
+    padding-left: 5px;
+    padding-bottom: 10px;
+    font-size: 18px;
+}
+
+.text-container__app-cost {
+    padding-left: 5px;
+    padding-top: 15px;
+    color: #212121;
+    font-size: 32px;
+}
+
+.text-container__app-buttons {
+    padding: 50px 20px 0px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.app-buttons__wishlist {
+    padding-right: 25px;
+}
+
+.submit-button,
+.wishlist__button,
+.install__button {
+    background-color: #039BE5;
+    color: white;
+    padding: 18px 52px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: none;
+}
+
+.comment-textarea {
+    width: 100%;
+    color: #323232;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+
+.wishlist__button {
+    background: #ED3B3B;    
+}
+
+.submit-button:hover,
+.wishlist__button:hover,
+.install__button:hover {
+    box-shadow: 1px 2px 3px #323232;
+}
+
+.text-container__app-category {
+    color: #212121;
+    font-size: 30px;
+    padding-left: 5px;
+}
+
+.application-wrapper__rating-info {
+    padding: 20px 20px 20px 20px;
+    background: #F1F1F1;
+    display: flex;
+    margin-bottom: 25px;
+}
+
+.rating-info__text {
+    font-size: 30px;
+    color: #212121;
+}
+
+.rating-info__number {
+    font-size: 25px;
+    color: #323232;
+    padding-left: 20px;
+    padding-top: 3px;
+}
+
+.application-wrapper__comment-wrapper,
+.application-wrapper__comments-wrapper {
+    background: #F1F1F1;
+    padding: 20px 20px 20px 20px;
+    margin-bottom: 25px;
+    max-height: 300px;
+    overflow: auto;
+}
+
+.comment-wrapper__submit {
+    display: flex;
+    justify-content: end;
+    padding-top: 15px;
+}
+
+.submit-button {
+    background:  #29f842;
+}
+
+.comments-wrapper__comment {
+    padding: 10px 10px 10px 10px;
+    background: #fefefe;
+    margin-bottom: 10px;
+}
+
+.comment__user {
+    color: #212121;
+    font-size: 25px;
+}
+
+.wrapper__submit__thank-you-message {
+    font-size: 25px;
+    color: red;
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.user__name {
+    padding-left: 10px;
+}
+
+.comment__text {
+    color: #323232;
+    font-size: 20px;
+    padding-left: 43px;
+    padding-top: 10px;
+}
+
+.rating-info__rate {
+    display: flex;
+    flex-grow: 1;
+    justify-content: end;
+    font-size: 30px;
+    padding-top: 3px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 850px) {
+    .side-navigation {
+        width: 100%;
+        margin-top: 150px;
+        position: fixed;
+        display: none;
+        height: auto;
+    }
+    .default-option {
+        display: flex;
+        position: fixed;
+        top: 0px;
+    }
+    .display-window-wrapper {
+        margin-left: 20px;
+        margin-top: 180px;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .application-wrapper__app-info {
+        flex-direction: column;
+    }
+    .app-info__image-container {
+        text-align: center;
+        width: 100%;
+    }
+    .app-info__text-container {
+        text-align: center;
+        width: 100%;
+    }
+    .text-container__app-name {
+        font-size: 30px;
+    }
+    .text-container__app-category {
+        font-size: 20px;
+    }
+    .text-container__app-release {
+        font-size: 14px;
+    }
+    .text-container__app-cost {
+        font-size: 20px;
+    }
+    .text-container__app-buttons {
+        justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 850px) and (max-width: 1030px) {
+    .application-wrapper__app-info {
+        flex-direction: column;
+    }
+    .app-info__image-container {
+        text-align: center;
+        width: 100%;
+    }
+    .app-info__text-container {
+        text-align: center;
+        width: 100%;
+    }
+    .text-container__app-name {
+        font-size: 30px;
+    }
+    .text-container__app-category {
+        font-size: 20px;
+    }
+    .text-container__app-release {
+        font-size: 14px;
+    }
+    .text-container__app-cost {
+        font-size: 20px;
+    }
+    .text-container__app-buttons {
+        justify-content: center;
+    }
+}
+
+.display-window-wrapper__category {
+    background: #F1F1F1;
+    padding-right: 20px;
+    margin-bottom: 25px;
+}
+
+.category__name {
+    font-size: 28px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+}
+
+.category__apps {
+    display: flex;
+    overflow: auto;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.apps__app {
+    height: 300px;
+    flex: 0 0 160px;
+    margin-right: 20px;
+    text-align: center;
+    background-color: #C3C3C3;
+}
+
+.app__image {
+    width: 170px;
+    height: 180px;
+    z-index: 1;
+}
+
+.app__name {
+    font-size: 14px;
+    text-align: left;
+    font-weight: bold;
+    box-sizing: border-box;
+    color: #323232;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.app__price, .app__ratings {
+    font-size: 12px;
+    box-sizing: border-box;
+    text-align: left;
+    color: #323232;
+    font-weight: bold;
+    padding-bottom: 4px;
+    padding-left: 4px;
+}
+
+.app__ratings {
+    margin-bottom: 10px;
+}
+
+.app__install {
+    background-color: #0284e4;
+    border: none;
+    color: white;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.app__install:hover {
+    box-shadow: 1px 2px 3px #323232;
+}
+
+.add-app,
+.dev-options__change,
+.account-type__change,
+.password__change,
+.email__change,
+.username__change,
+.fullname__change {
+    background: #F1F1F1;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin-bottom: 20px;
+}
+
+.app__text,
+.change__text {
+    font-size: 24px;
+    color: #323232;
+    cursor: pointer;
+}
+
+.change__options__password,
+.change__options__email,
+.change__options__username,
+.change__options__verify-pass,
+.change__options__name {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.change__options {
+    display: none;
+}
+
+.email__text,
+.password__text,
+.username__text,
+.name__text {
+    box-sizing: border-box;
+    width: 360px;
+    height: 54px;
+    padding: 6px 16px;
+    border: 3px solid #4f4e4e;
+    background-color: #C3C3C3;
+    transition: border 0.5s;
+    outline: none;
+    font-size: 17px;
+    color: black;
+}
+
+.options__text {
+    font-size: 24px;
+    color: #323232;
+    padding-top: 20px;
+}
+
+.change__options__yes-no,
+.change__options__submit {
+    padding-top: 15px;
+}
+
+.yes__button,
+.submit__button {
+    background-color: #C3C3C3;
+    padding: 18px 52px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 3px solid #4F4E4E;
+}
+
+.yes__button:hover,
+.no__button:hover,
+.submit__button:hover {
+    background: #252525;
+    border: 3px solid black;
+    color: white;
+}
+
+.change__options__messages {
+	color: red;
+	font-size: 20px;
+	text-align: center;
+	padding-top: 15px;
+}
+
+.downloads-wrapper__app,
+.wishlist-wrapper__app {
+    display: flex;
+    padding: 20px 20px 20px 20px;
+    background: #F1F1F1;
+    min-width: 720px;
+    margin-bottom: 20px;
+}
+
+.downloads-wrapper__app:hover {
+	background: #ED3B3B;
+	opacity: 1;
+}
+
+.wishlist-wrapper__app:hover {
+	background: #EF6C00;
+	opacity: 1;
+}
+.downloads-wrapper__app:hover button,
+.downloads-wrapper__app:hover div,
+.wishlist-wrapper__app:hover button,
+.wishlist-wrapper__app:hover div {
+    color: white;
+}
+
+.downloads-wrapper__app:hover button,
+.wishlist-wrapper__app:hover button {
+    border-color: white;
+}
+
+.info__rating {
+    font-size: 30px;
+    font-family: "Lato", "sans-serif";
+    font-weight: bold;
+}
+
+.dp__picture {
+    width: 150px;
+    height: 200px;
+    opacity: 1;
+}
+
+.app__info {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    color: #323232;
+    flex-grow: 1;
+}
+
+.info__name {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.info__options {
+    padding: 50px 20px 0px 20px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.remove__button,
+.get-it__button {
+    background-color: transparent;
+    color: #323232;
+    padding: 16px 48px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s;
+    border: 3px solid #323232;
+}
+
+.get-it__button:hover {
+    background: #277F06;
+}
+
+.remove__button:hover {
+    background: #BB220D;
+}
+
+.options__get-it {
+    margin-right: 20px;
+}
+
+.footer-wrapper {
+    text-align: center;
+    position: absolute;
+    bottom: 18px;
+    left: calc(100vw / 2 - 120px);
+}
+
+.footer-wrapper {
+    text-align: center;
+    position: absolute;
+    bottom: 18px;
+    left: calc(100vw / 2 - 120px);
+}
+
+.footer {
+    color: black;
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 850px) {
+    .side-navigation {
+        width: 100%;
+        margin-top: 150px;
+        position: fixed;
+        display: none;
+        height: auto;
+    }
+    .default-option {
+        display: flex;
+        position: fixed;
+        top: 0px;
+    }
+    .display-window-wrapper {
+        margin-left: 20px;
+        margin-top: 180px;
+    }
+}
